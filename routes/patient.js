@@ -16,9 +16,9 @@ router.post("/patient",async(req,res,next)=>{
         {
             lname:req.body.lname,
             fname:req.body.fname,
-            state:req.body.patient.state,
+            state:req.body.state,
             drugallergy:req.body.drugallergy,
-            allergy:req.bod.allergy,
+            allergy:req.body.allergy,
             blood:req.body.blood,
             gender:req.body.gender,
             status:req.body.status,
@@ -28,6 +28,8 @@ router.post("/patient",async(req,res,next)=>{
             family_medical:req.body.family_medical,
             past_illness:req.body.past_illness,    
             occupation:req.body.occupation,
+            nutrition:req.body.nutrition,
+            religion:req.body.religion
         }
     )
     res.redirect("/")

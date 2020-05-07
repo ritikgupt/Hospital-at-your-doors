@@ -7,7 +7,8 @@ var DoctorSchema=new c.Schema({
     hospital:String,
     blood:String,
     gender:String,
-    status:String,
+    age:String,
+    degree:String,
     hos_time:String
 })
 module.exports=c.model("Doctor",DoctorSchema)

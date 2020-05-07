@@ -3,11 +3,18 @@ var PatientSchema=new c.Schema({
     fname:String,
     lname:String,
     state:String,
-    allergy1:String,
-    allergy2:String,
+    allergy:String,
+    drugallergy:String,
     blood:String,
-    gender:String,
     status:String,
+    age:String,
+    father:String,
+    occupation:String,
+    nutrition:String,
+    religion:String,
+    family_medical:String,
+    past_illness:String,
+    gender:String,
     surgery:String
 })
 module.exports=c.model("Patient",PatientSchema)
