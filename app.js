@@ -37,6 +37,8 @@ const patientRoutes=require('./routes/patient');
 app.use(patientRoutes);
 const loginRoutes=require('./routes/login');
 app.use(loginRoutes);
+const appointmentRoutes=require('./routes/appointment');
+app.use(appointmentRoutes);
 // app.use('/sign',require('./routes/sign'))
 app.listen(PORT,function(){
     console.log("Server has started.");
