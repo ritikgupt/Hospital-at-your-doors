@@ -4,5 +4,6 @@ var AppointmentSchema=new c.Schema({
     disease:{type:String,required:true},
     severity:{type:String,required:true},
     description:{type:String,required:true},
+    report:{type:String,required:true},
 })
 module.exports=c.model("Appointment",AppointmentSchema)

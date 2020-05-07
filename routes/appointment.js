@@ -1,7 +1,6 @@
 var express=require("express");
 var router=express.Router();
 var Appointment=require('../models/appointment')
-var passport=require("passport");
 router.get("/appointment",async(req,res,next)=>{
     res.render("appointment");
 })
@@ -10,7 +9,8 @@ Appointment.create({
     time:req.body.time,
     disease:req.body.disease,
     severity:req.body.severity,
-    description:req.body.description
+    description:req.body.description,
+    report:req.body.report,
 })
 res.send('appointment requested');
 })
