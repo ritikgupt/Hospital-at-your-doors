@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>
+            Hospital At your Doors
+        </title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    </head>
+    <body>
+        <div class="ui fixed inverted menu">
+            <div class="ui container">
+                <div class="header item"><i class="code icon"></i>Hospital At Your Doors</div>
+                <%if(!currentUser){%>
+                <a href="/shops/login" class="item">Login</a>
+                <a href="/shops/sign" class="item">SignIn</a>
+                <%} else{%>
+                    <a href="#" class="item">Signed In As <%=currentUser.username%></a>
+                    <a href="/shops/logout" class="item">Logout</a>
+                    <a href="/shops/profile/<%=currentUser._id%>" class="item">Profile</a>
+                    <a href="/physical" class="item">Physical Health Checkup</a>
+                    <a href="/" class="item">Home</a>
+                   
+                <a href="/mental" class="item">Mental Health Checkup</a>
+                <a href="/visit" class="item">Hospital Visit</a>
+                <a href="/visit_history" class="item">Visit History</a>
+                <!-- <a href="/shops/sport" class="item">Sports_Equipments</a>
+                <a href="/shops/mattress" class="item">Mattresses</a>
+                <a href="/shops/cycle" class="item">Bicycles</a> -->
+                <%}%>   
+            </div>
+        </div>

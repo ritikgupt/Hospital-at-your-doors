@@ -8,7 +8,7 @@ function isLoggedIn(req,res,next){
     else
     res.redirect("/login");
 }
-router.get("/doctor",isLoggedIn,async(req,res,next)=>{
+router.get("/doctor",async(req,res,next)=>{
     res.render("doctor",{currentUser:req.user})
 })
 router.post("/doctor",async(req,res,next)=>{
