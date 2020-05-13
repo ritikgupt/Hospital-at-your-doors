@@ -9,13 +9,13 @@
         <div class="ui fixed inverted menu">
             <div class="ui container">
                 <div class="header item"><i class="code icon"></i>Hospital At Your Doors</div>
-                <%if(!currentUser){%>
+                <%if(!user){%>
                 <a href="/shops/login" class="item">Login</a>
                 <a href="/shops/sign" class="item">SignIn</a>
                 <%} else{%>
-                    <a href="#" class="item">Signed In As <%=currentUser.username%></a>
-                    <a href="/shops/logout" class="item">Logout</a>
-                    <a href="/shops/profile/<%=currentUser._id%>" class="item">Profile</a>
+                    <a href="#" class="item">Signed In As <%=user.username%></a>
+                    <a href="/logout" class="item">Logout</a>
+                    <a href="/shops/profile/<%=user._id%>" class="item">Profile</a>
                     <a href="/physical" class="item">Physical Health Checkup</a>
                     <a href="/" class="item">Home</a>
                    

@@ -18,7 +18,8 @@ router.post("/sign",async(req,res,next)=>{
         }
         else{
             passport.authenticate("local")(req,res,function(){
-                if(req.body.fd==="patient")
+                console.log(req.user);
+                if(req.user.fd==="patient")
                 res.redirect("/patient")
                 else
                 res.redirect("/doctor")

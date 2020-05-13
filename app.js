@@ -41,6 +41,8 @@ const appointmentRoutes=require('./routes/appointment');
 app.use(appointmentRoutes);
 const medicationRoutes=require('./routes/medication');
 app.use(medicationRoutes);
+const homeRoutes=require('./routes/home');
+app.use(homeRoutes);
 // app.use('/sign',require('./routes/sign'))
 app.listen(PORT,function(){
     console.log("Server has started.");

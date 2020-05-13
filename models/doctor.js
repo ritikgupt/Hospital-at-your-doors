@@ -1,5 +1,5 @@
-var c=require("mongoose");
-var DoctorSchema=new c.Schema({
+var mongoose=require("mongoose");
+var DoctorSchema=new mongoose.Schema({
     fname:String,
     lname:String,
     speacialist:String,
@@ -11,4 +11,4 @@ var DoctorSchema=new c.Schema({
     degree:String,
     hos_time:String
 })
-module.exports=c.model("Doctor",DoctorSchema)
+module.exports=mongoose.model("Doctor",DoctorSchema)
