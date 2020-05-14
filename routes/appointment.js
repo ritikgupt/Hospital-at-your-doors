@@ -1,17 +1,42 @@
 var express=require("express");
 var router=express.Router();
+var multer = require('multer');
+var upload = multer({dest: 'uploads/'});
+var cloudinary = require('cloudinary');
+cloudinary.config({
+  cloud_name: 'dzsms0nne',
+  api_key: '542159551497727',
+  api_secret: 'yRkiZK6Gf4eNNhXqvrNI9WHFKM0',
+});
+function isLoggedIn(req,res,next){
+    if(req.isAuthenticated()){
+        return next();
+    }
+    else
+    res.redirect("/login");
+}
 var Appointment=require('../models/appointment')
-router.get("/appointment",async(req,res,next)=>{
-    res.render("appointment");
+router.get("/appointment",isLoggedIn,async(req,res,next)=>{
+    res.render("appointment",{user:req.user});
 })
-router.post("/appointment",async(req,res,next)=>{
+router.post("/appointment",upload.single('report'),async(req,res,next)=>{
+    console.log(req.file.path);
+    cloudinary.v2.uploader.upload(req.file.path, {overwrite: true}, function(err, result){
+        if (err){
+          console.log('err');
+        }
+        console.log(result)
 Appointment.create({
     time:req.body.time,
-    disease:req.body.disease,
+    reason:req.body.reason,
+    symptoms:req.body.symptoms,
     severity:req.body.severity,
-    description:req.body.description,
-    report:req.body.report,
+    precaution:req.body.precaution,
+    report:result.secure_url,
+    v_doc:req.body.v_doc,
+    patient_id:req.body.patient_id
 })
+    })
 res.send('appointment requested');
 })
 module.exports=router;

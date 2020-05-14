@@ -15,12 +15,12 @@
                 <%} else{%>
                     <a href="#" class="item">Signed In As <%=user.username%></a>
                     <a href="/logout" class="item">Logout</a>
-                    <a href="/shops/profile/<%=user._id%>" class="item">Profile</a>
+                    <a href="/<%=user._id%>/profile" class="item">Profile</a>
                     <a href="/physical" class="item">Physical Health Checkup</a>
                     <a href="/" class="item">Home</a>
                    
-                <a href="/mental" class="item">Mental Health Checkup</a>
-                <a href="/visit" class="item">Hospital Visit</a>
+                <a href="/mental" class="item">Mental Health Issues</a>
+                <a href="/appointment" class="item">Appointment</a>
                 <a href="/visit_history" class="item">Visit History</a>
                 <!-- <a href="/shops/sport" class="item">Sports_Equipments</a>
                 <a href="/shops/mattress" class="item">Mattresses</a>

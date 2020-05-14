@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ritikgupt/Hospital-at-your-doors#readme",
   "dependencies": {
+    "cloudinary": "^1.21.0",
     "mongoose": "^5.9.13"
   }
 }

@@ -20,4 +20,7 @@ router.get("/logout",function(req,res){
     req.logout();
     res.redirect("/");
 })
+router.get('/mental',(req,res)=>{
+    res.render("mental",{user:req.user});
+});
 module.exports=router;

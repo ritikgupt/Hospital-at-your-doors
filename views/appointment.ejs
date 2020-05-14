@@ -1,0 +1,67 @@
+<%-include ('./partials/header')%>
+<form class="ui form" method="POST" action="/appointment" enctype="multipart/form-data">
+    <h4 class="ui dividing header">Appointment Details</h4>
+    <div class="field">
+      <label>Time</label>
+        <div class="field">
+          <input type="text" name="time" placeholder="First Name">
+        </div>
+    </div>
+    <div class="field">
+      <label>Reason</label>
+        <div class="field">
+          <input type="text" name="reason" placeholder="First Name">
+        </div>
+    </div>
+    <div class="field">
+        <label> Symptoms</label>
+          <div class="field">
+            <input type="text" name="symptoms" placeholder="First Name">
+          </div>
+      </div>
+      <div class="two fields">
+      <div class="field">
+        <label>Condition</label>
+        <select class="ui fluid dropdown" name="severity">
+          <option value="">Severity</option>
+      <option value="RC">Regular CheckUp</option>
+      <option value="E">Emergency</option>
+      <option value="CC">Critical Condition</option>
+      <option value="HF">High Fever</option>
+        </select>
+      </div>
+      <div class="field">
+        <label> Preacautions Taken Prior To Visit</label>
+          <div class="field">
+            <input type="text" name="precaution" placeholder="">
+          </div>
+         
+      </div>
+      <div class="field">
+        <label>Reports</label>
+        <input type="file" name="report" >
+    </div>
+        <div class="field">
+          <label>Visiting Doctor</label>
+          <select class="ui fluid dropdown" name="v_doc">
+            <option value="">Select</option>
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+        <option value="O">Other</option>
+          </select>
+        </div>
+    </div>
+    <div class="field">
+        <div class="field">
+          <input type="text" id="ac" name="user_id" value="<%=user.id%>">
+        </div>
+    </div>
+      <button class="ui button" tabindex="0">Add Medication </button>
+  </form>
+  
+<style>
+    #ac{
+        visibility:hidden;
+    }
+    </style>
+<%- include ('./partials/footer')%>

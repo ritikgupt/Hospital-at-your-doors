@@ -43,6 +43,10 @@ const medicationRoutes=require('./routes/medication');
 app.use(medicationRoutes);
 const homeRoutes=require('./routes/home');
 app.use(homeRoutes);
+const profileRoutes=require('./routes/profile');
+app.use(profileRoutes);
+const healthRoutes=require('./routes/health');
+app.use(healthRoutes);
 // app.use('/sign',require('./routes/sign'))
 app.listen(PORT,function(){
     console.log("Server has started.");

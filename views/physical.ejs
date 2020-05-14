@@ -1,0 +1,137 @@
+<%-include ('./partials/header')%>
+<body>
+    <form class="ui form" method="POST" action="/physical">
+        <div class="wrapper">
+                <div class="left">
+        <table class="ui table">
+                <thead>
+                  <tr><th class="ten wide">Symptoms</th>
+                  <th class="six wide">Your Details</th>
+                </tr></thead>
+                <tbody>
+                  <tr>
+                    <td>Abdominal Pain</td>
+                    <td>   <select class="ui fluid dropdown" name=physical[abdominal_pain]>
+                      <option value="">Select</option>
+                  <option value="Y">YES</option>
+                  <option value="N">NO</option>
+                    </select></td>
+                  </tr>
+                  <tr>
+                    <td>Abnormal Mensturation</td>
+                    <td>   <select class="ui fluid dropdown" name=physical[abnormal_mensturation]>
+                      <option value="">Select</option>
+                  <option value="Y">YES</option>
+                  <option value="N">NO</option>
+                    </select></td>
+                  </tr>
+                  <tr>
+                        <td>Back Pain</td>
+                        <td>    <select class="ui fluid dropdown" name=physical[back_pain]>
+                          <option value="">Select</option>
+                  <option value="Y">YES</option>
+                  <option value="N">NO</option>
+                        </select></td>
+                      </tr>
+                      <tr>
+                            <td>Belly Pain</td>
+                            <td>    <select class="ui fluid dropdown" name=physical[belly_pain]>
+                              <option value="">Select</option>
+                  <option value="Y">YES</option>
+                  <option value="N">NO</option>
+                            </select></td>
+                          </tr>
+                          <tr>
+                            <td>Blood In Sputum</td>
+                            <td>    <select class="ui fluid dropdown" name=physical[blood_in_sputum]>
+                              <option value="">Select</option>
+                              <option value="Y">YES</option>
+                              <option value="N">NO</option>
+                            </select></td>
+                          </tr>
+                          <tr>
+                            <td>Constipation</td>
+                            <td>    <select class="ui fluid dropdown" name=physical[bladder_discomfort]>
+                              <option value="">Select</option>
+                  <option value="Y">YES</option>
+                  <option value="N">NO</option>
+                            </select></td>
+                          </tr>
+                          <tr>
+                            <td>Chest Pain</td>
+                            <td>    <select class="ui fluid dropdown" name=physical[chest_pain]>
+                              <option value="">Select</option>
+                  <option value="Y">YES</option>
+                  <option value="N">NO</option>
+                            </select></td>
+                          </tr>
+                          <tr>
+                            <td>Irritation In Anus</td>
+                            <td>    <select class="ui fluid dropdown" name=physical[irritation_in_anus]>
+                              <option value="">Select</option>
+                  <option value="Y">YES</option>
+                  <option value="N">NO</option>
+                            </select></td>
+                          </tr>
+                          <tr>
+                            <td>Knee Pain</td>
+                            <td>    <select class="ui fluid dropdown" name=physical[knee_pain]>
+                              <option value="">Select</option>
+                              <option value="Y">YES</option>
+                              <option value="N">NO</option>
+                            </select></td>
+                          </tr>
+                          <tr>
+                            <td>Cramps</td>
+                            <td>    <select class="ui fluid dropdown" name=physical[cramps]>
+                              <option value="">Select</option>
+                              <option value="Y">YES</option>
+                              <option value="N">NO</option>
+                            </select></td>
+                          </tr>
+                </tbody>
+                <tfoot>
+                  <tr><th><button class="ui button" tabindex="0">Add Medication </button></th>   
+                </tr></tfoot>
+              </table>
+              </div>
+              </div>
+    
+  </body>
+  <style>
+  html, body {
+background-image: url(https://somnomed.com/wp-content/uploads/2017/09/background-website-image-1-2.jpg);
+background-repeat:no-repeat;
+background-size:cover;
+padding-top:4%;
+padding-left:10%;
+padding-right:10%;
+  
+  font-family: 'Open Sans', sans-serif;
+}
+
+.name {
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 2px;
+}
+
+.social-links {
+  list-style: none;
+  padding-left: 0px;
+  font-size: 18px;
+}
+
+.social-links li {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.social-links a {
+  text-decoration: none;
+  padding: 4px;
+}
+
+.social-links a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+</style>
