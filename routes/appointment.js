@@ -3,6 +3,7 @@ var router=express.Router();
 var multer = require('multer');
 var upload = multer({dest: 'uploads/'});
 var cloudinary = require('cloudinary');
+var Appointment=require('../models/appointment');
 cloudinary.config({
   cloud_name: 'dzsms0nne',
   api_key: '542159551497727',
@@ -20,11 +21,12 @@ router.get("/appointment",isLoggedIn,async(req,res,next)=>{
     res.render("appointment",{user:req.user});
 })
 router.post("/appointment",upload.single('report'),async(req,res,next)=>{
-    console.log(req.file.path);
-    cloudinary.v2.uploader.upload(req.file.path, {overwrite: true}, function(err, result){
+    console.log(req.file);
+    cloudinary.v2.uploader.upload(req.file.path, (err, result)=>{
         if (err){
-          console.log('err');
+          throw err;
         }
+        else{
         console.log(result)
 Appointment.create({
     time:req.body.time,
@@ -36,7 +38,7 @@ Appointment.create({
     v_doc:req.body.v_doc,
     patient_id:req.body.patient_id
 })
+res.redirect('/');}
     })
-res.send('appointment requested');
 })
 module.exports=router;
